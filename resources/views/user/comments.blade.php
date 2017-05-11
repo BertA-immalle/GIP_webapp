@@ -3,20 +3,23 @@
 @section('content')
 
 <!DOCTYPE html>
-<style>
-    .h1{
-        display: flex;
-        justify-content: center;
-        aling-content: center;
-    }
-</style>
 
 <html>
     <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">your comments</div>
 
-        <h1>hello world</h1>
-
+                        <div class="panel-body">gdfghfhfghjfg</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
+
+
 
 @endsection
