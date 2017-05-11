@@ -10,6 +10,9 @@
                 <div class="panel-body">
                     You are logged in!
                 </div>
+                <div>
+                    <button><a href="#">comments</a></button>
+                </div>
             </div>
         </div>
     </div>
