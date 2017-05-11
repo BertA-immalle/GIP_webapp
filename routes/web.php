@@ -20,5 +20,17 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('comments', function () {
-    return view('user.comments');
+
+    $comments = DB::table('comments')->oldest()->get();
+
+    return view('user.comments', compact('comments'));
+});
+
+Route::get('comments/{comment}', function ($id) {
+
+    $comment = DB::table('comments')->find($id);
+
+    dd($id);
+
+    return view('user.comments', compact('comments'));
 });
