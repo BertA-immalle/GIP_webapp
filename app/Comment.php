@@ -6,11 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
-    /**
-     * Get the post that owns the comment.
-     */
-    public function post()
+    public function scopeGetCommentsFromAdmin($query) 
     {
-        return $this->belongsTo('App\Post');
+        return $query->where('ID', '1');
     }
 }

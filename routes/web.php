@@ -1,5 +1,7 @@
 <?php
 
+use App\Comment;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,18 +21,15 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('comments', function () {
+Route::get('/home', function () {
+    $comments = Comment::all();
 
-    $comments = DB::table('comments')->oldest()->get();
-
-    return view('user.comments', compact('comments'));
+    return view('home', compact('comments'));
 });
 
-Route::get('comments/{comment}', function ($id) {
-
-    $comment = DB::table('comments')->find($id);
-
-    dd($id);
-
-    return view('user.comments', compact('comments'));
+Route::post('/home', function () {
+    $new_comment = new Comment;
+    $new_comment->content = request('content');
+    $new_comment->save();
+    return redirect('/');
 });

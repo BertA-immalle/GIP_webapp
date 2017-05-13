@@ -62,6 +62,17 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            #whitearea{
+                margin-top: 50px;
+            }
+
+            .centring{
+                width: 50px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+            }
         </style>
     </head>
     <body>
@@ -69,7 +80,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
-                        <a href="{{ url('/home') }}">your page</a>
+                        <a href="{{ url('/home') }}">Your page</a>
                     @else
                         <a href="{{ url('/login') }}">Login</a>
                         <a href="{{ url('/register') }}">Register</a>
@@ -79,11 +90,27 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    WEBAPPLICATIE GIP
+                    Comment on this
                 </div>
 
                 <div class="links">
-                    <a href="https://berta-immalle.github.io/GIPWebsite/">GIP website</a>
+                    <iframe width="853" height="480" src="https://www.youtube.com/embed/Jrt3aRzzuSk?rel=0" frameborder="0" allowfullscreen="" align="middle"></iframe>
+                </div>
+                <div class="content" id="whitearea">
+
+
+
+
+                    <form method="POST" action="/home">
+                    {{ csrf_field() }}
+                        <textarea rows="5" cols="104" name="content" text="">post here your comment</textarea>
+                        <button type="submit" class="centring">post</button>
+                    </form>
+
+
+
+
+
                 </div>
             </div>
         </div>
