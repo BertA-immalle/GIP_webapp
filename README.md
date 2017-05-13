@@ -1,10 +1,10 @@
-# anonieme comment section
+# anonymous comment section
 
-## versie 1
+## version 1
 
-zie .png file
+view .png file
 
-## versie 2
+## version 2
 
 1. clone repository
 2. install composer
