@@ -2,7 +2,7 @@
 
 ## version 1
 
-view .png file
+view *.png* file
 
 ## version 2
 
@@ -13,12 +13,15 @@ view .png file
 * sessionwise: `export PATH="$HOME/.config/composer/vendor/bin:$PATH"`
 * global: `export PATH="$HOME/.config/composer/vendor/bin:$PATH" >> ~/.zshrc`
 4. `composer install`
-5. make schema with name name WEBAPP_test
-6. make user
+5. make new schema
+6. make new user
 7. configure this user with the necessary schema previliges
-8. edit the `DB_DATABASE` `DB_USERNAME` and the `DB_PASSWORD` variable from the .env file
-9. `php artisan serve`
-10. enjoy
+8. copy *.env.example file*
+9. edit the `DB_DATABASE` `DB_USERNAME` and the `DB_PASSWORD` variable from the *.env* file
+10. `php artisan key:generate`
+11. `php artisan config:clear`
+10. `php artisan serve`
+11. enjoy
 
 ## explenation
 
