@@ -25,4 +25,4 @@ view *.png* file
 
 ## explenation
 
-this is first and and formost a school project. It is a webapplication where you can comment on my earlier video I made for an explenation for a tool. In my instance it was youtube. I did this with a colleague of mine.
+This is first and and formost a school project. It is a webapplication where you can comment on my earlier video I made for an explenation for a tool. It could also be used at the start or end of a tour around the workingspace. You tell your guest that if they want they can leave a comment on the video you're displaying to them. And it is always assuring to visitors they can leave some quote or working point anonymous.
